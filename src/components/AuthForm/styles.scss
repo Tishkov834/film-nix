@@ -1,0 +1,23 @@
+.auth-form {
+  @apply flex flex-col m-auto;
+
+  &-heading {
+    @apply font-base text-[64px] text-grey-white-light;
+  }
+
+  &-content {
+    @apply flex flex-col ;
+  }
+
+  &-redirect {
+    @apply flex items-center mt-[20px];
+
+    &-text {
+      @apply font-base text-[16px] text-grey-white-dark font-[600];
+    }
+
+    &-link {
+      @apply font-base text-[16px] text-grey-white/30 font-[600] no-underline ml-[5px];
+    }
+  }
+}
