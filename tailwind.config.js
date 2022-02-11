@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         'blue-dark': '#121829',
         purple: '#7B6EF6',
+        'grey-blue-dark': '#323B54',
+        'grey-blue-light': '#475069',
       },
     },
   },
