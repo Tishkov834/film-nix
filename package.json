@@ -13,6 +13,8 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "json-server": "^0.17.0",
+    "json-server-auth": "^2.1.0",
     "postcss": "^8.4.6",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
@@ -24,7 +26,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start & json-server-auth -p 3003 -w db.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
