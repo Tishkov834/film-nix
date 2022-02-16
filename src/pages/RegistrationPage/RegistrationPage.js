@@ -6,7 +6,7 @@ import Input from '../../components/common/Input';
 import Button from '../../components/common/Button';
 import { register } from '../../api/users';
 import { setUser } from '../../store/authorization/authReducer';
-import { HOME_PAGE } from '../../constants/routes';
+import { HOME_PAGE, LOGIN } from '../../constants/routes';
 
 function RegistrationPage() {
   const [username, setUsername] = useState('');
@@ -38,7 +38,7 @@ function RegistrationPage() {
   };
 
   return (
-    <AuthForm heading="Registration" text="Already have an account?" textLink="Login here" onSubmit={handleRegister}>
+    <AuthForm heading="Registration" text="Already have an account?" textLink="Login here" link={LOGIN} onSubmit={handleRegister}>
       <Input
         placeholderText="Login"
         type="text"
@@ -69,7 +69,7 @@ function RegistrationPage() {
         value={repeatPassword}
         onChange={(e) => setRepeatPassword(e.target.value)}
       />
-      <Button type="submit" disabled={isLoading}>Registration</Button>
+      <Button type="submit" isDisabled={isLoading}>Registration</Button>
     </AuthForm>
   );
 }

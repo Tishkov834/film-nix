@@ -2,13 +2,14 @@ import { useState } from 'react';
 import AuthForm from '../../components/AuthForm';
 import Input from '../../components/common/Input';
 import Button from '../../components/common/Button';
+import { REGISTRATION } from '../../constants/routes';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
-    <AuthForm heading="Login" text="Don't have an account?" textLink="Sing up here">
+    <AuthForm heading="Login" text="Don't have an account?" textLink="Sing up here" link={REGISTRATION}>
       <Input
         placeholderText="Email"
         type="email"
