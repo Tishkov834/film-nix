@@ -5,6 +5,7 @@ import RegistrationPage from '../../pages/RegistrationPage';
 import HomePage from '../../pages/HomePage';
 import LoginPage from '../../pages/LoginPage';
 import Header from '../Header';
+import GuestRoute from '../GuestRoute';
 import store, { persistor } from '../../store';
 import { HOME_PAGE, LOGIN, REGISTRATION } from '../../constants/routes';
 import './styles.scss';
@@ -18,8 +19,8 @@ function App() {
             <Header />
             <Routes>
               <Route exact path={HOME_PAGE} element={<HomePage />} />
-              <Route exact path={REGISTRATION} element={<RegistrationPage />} />
-              <Route exact path={LOGIN} element={<LoginPage />} />
+              <Route path={REGISTRATION} element={<GuestRoute component={RegistrationPage} />} />
+              <Route path={LOGIN} element={<GuestRoute component={LoginPage} />} />
             </Routes>
           </div>
         </PersistGate>
