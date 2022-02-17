@@ -5,6 +5,10 @@
     @apply font-base text-grey-white-dark text-[16px] font-[600] leading-[24px] tracking-[.05em];
   }
 
+  &-button {
+    @apply flex items-center border-none bg-transparent cursor-pointer;
+  }
+
   &-logo {
     @apply flex items-center no-underline;
 
