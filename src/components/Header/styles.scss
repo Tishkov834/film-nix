@@ -1,0 +1,23 @@
+.header {
+  @apply sticky flex justify-between px-[120px] py-[20px] bg-blue-dark/30;
+
+  &-text {
+    @apply font-base text-grey-white-dark text-[16px] font-[600] leading-[24px] tracking-[.05em];
+  }
+
+  &-logo {
+    @apply flex items-center no-underline;
+
+    &-image {
+      @apply w-[60px] h-[60px];
+    }
+  }
+
+  &-link {
+    @apply flex items-center no-underline;
+
+    &-image {
+      @apply w-[20px] h-[20px] ml-[5px];
+    }
+  }
+}

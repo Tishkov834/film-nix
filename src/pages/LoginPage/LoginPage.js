@@ -4,28 +4,23 @@ import { useNavigate } from 'react-router-dom';
 import AuthForm from '../../components/AuthForm';
 import Input from '../../components/common/Input';
 import Button from '../../components/common/Button';
-import { register } from '../../api/users';
+import { HOME_PAGE, REGISTRATION } from '../../constants/routes';
+import { login } from '../../api/users';
 import { setUser } from '../../store/authorization/authReducer';
-import { HOME_PAGE, LOGIN } from '../../constants/routes';
 
-function RegistrationPage() {
-  const [username, setUsername] = useState('');
-  const [name, setName] = useState('');
+function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [repeatPassword, setRepeatPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleRegister = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault();
 
     setIsLoading(true);
 
-    register({
-      username,
-      name,
+    login({
       email,
       password,
     })
@@ -38,19 +33,7 @@ function RegistrationPage() {
   };
 
   return (
-    <AuthForm heading="Registration" text="Already have an account?" textLink="Login here" link={LOGIN} onSubmit={handleRegister}>
-      <Input
-        placeholderText="Login"
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <Input
-        placeholderText="Name"
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+    <AuthForm heading="Login" text="Don't have an account?" textLink="Sing up here" link={REGISTRATION} onSubmit={handleLogin}>
       <Input
         placeholderText="Email"
         type="email"
@@ -63,15 +46,9 @@ function RegistrationPage() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <Input
-        placeholderText="Repeat password"
-        type="password"
-        value={repeatPassword}
-        onChange={(e) => setRepeatPassword(e.target.value)}
-      />
-      <Button type="submit" isDisabled={isLoading}>Registration</Button>
+      <Button type="submit" isDisabled={isLoading}>Login</Button>
     </AuthForm>
   );
 }
 
-export default RegistrationPage;
+export default LoginPage;
