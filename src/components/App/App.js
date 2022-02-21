@@ -7,9 +7,15 @@ import RegistrationPage from '../../pages/RegistrationPage';
 import HomePage from '../../pages/HomePage';
 import LoginPage from '../../pages/LoginPage';
 import Header from '../Header';
+import UserPage from '../../pages/UserPage';
 import GuestRoute from '../GuestRoute';
 import store, { persistor } from '../../store';
-import { HOME_PAGE, LOGIN, REGISTRATION } from '../../constants/routes';
+import {
+  HOME_PAGE,
+  LOGIN,
+  REGISTRATION,
+  USER_PAGE,
+} from '../../constants/routes';
 import './styles.scss';
 
 function App() {
@@ -29,6 +35,7 @@ function App() {
                 <Route exact path={HOME_PAGE} element={<HomePage />} />
                 <Route path={REGISTRATION} element={<GuestRoute component={RegistrationPage} />} />
                 <Route path={LOGIN} element={<GuestRoute component={LoginPage} />} />
+                <Route exact path={USER_PAGE} element={<UserPage />} />
               </Routes>
             </div>
           </PersistGate>
