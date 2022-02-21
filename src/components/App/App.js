@@ -1,6 +1,8 @@
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { positions, Provider as AlertProvider } from 'react-alert';
+import AlertTemplate from 'react-alert-template-basic';
 import RegistrationPage from '../../pages/RegistrationPage';
 import HomePage from '../../pages/HomePage';
 import LoginPage from '../../pages/LoginPage';
@@ -11,21 +13,28 @@ import { HOME_PAGE, LOGIN, REGISTRATION } from '../../constants/routes';
 import './styles.scss';
 
 function App() {
+  const options = {
+    position: positions.TOP_CENTER,
+    timeout: 5000,
+  };
+
   return (
-    <Router>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <div id="wrapper">
-            <Header />
-            <Routes>
-              <Route exact path={HOME_PAGE} element={<HomePage />} />
-              <Route path={REGISTRATION} element={<GuestRoute component={RegistrationPage} />} />
-              <Route path={LOGIN} element={<GuestRoute component={LoginPage} />} />
-            </Routes>
-          </div>
-        </PersistGate>
-      </Provider>
-    </Router>
+    <AlertProvider template={AlertTemplate} {...options}>
+      <Router>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <div id="wrapper">
+              <Header />
+              <Routes>
+                <Route exact path={HOME_PAGE} element={<HomePage />} />
+                <Route path={REGISTRATION} element={<GuestRoute component={RegistrationPage} />} />
+                <Route path={LOGIN} element={<GuestRoute component={LoginPage} />} />
+              </Routes>
+            </div>
+          </PersistGate>
+        </Provider>
+      </Router>
+    </AlertProvider>
   );
 }
 
