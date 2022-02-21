@@ -1,19 +1,19 @@
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { USER_PAGE } from '../../constants/routes';
+import { LOGIN } from '../../constants/routes';
 
-function GuestRoute({ component: Component }) {
+function PrivateRoute({ component: Component }) {
   const isAuthorization = useSelector(({ authorization }) => authorization.token);
-  return !isAuthorization ? <Component /> : <Navigate to={USER_PAGE} />;
+  return isAuthorization ? <Component /> : <Navigate to={LOGIN} />;
 }
 
-GuestRoute.propTypes = {
+PrivateRoute.propTypes = {
   component: PropTypes.element,
 };
 
-GuestRoute.defaultProps = {
+PrivateRoute.defaultProps = {
   component: null,
 };
 
-export default GuestRoute;
+export default PrivateRoute;

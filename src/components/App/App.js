@@ -9,6 +9,7 @@ import LoginPage from '../../pages/LoginPage';
 import Header from '../Header';
 import UserPage from '../../pages/UserPage';
 import GuestRoute from '../GuestRoute';
+import PrivateRoute from '../PrivateRoute';
 import store, { persistor } from '../../store';
 import {
   HOME_PAGE,
@@ -35,7 +36,7 @@ function App() {
                 <Route exact path={HOME_PAGE} element={<HomePage />} />
                 <Route path={REGISTRATION} element={<GuestRoute component={RegistrationPage} />} />
                 <Route path={LOGIN} element={<GuestRoute component={LoginPage} />} />
-                <Route exact path={USER_PAGE} element={<UserPage />} />
+                <Route path={USER_PAGE} element={<PrivateRoute component={UserPage} />} />
               </Routes>
             </div>
           </PersistGate>
