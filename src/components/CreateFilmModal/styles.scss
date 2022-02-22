@@ -1,0 +1,35 @@
+.modal {
+  @apply overflow-scroll overflow-x-hidden fixed flex flex-col items-center justify-center inset-0 bg-[#000]/70;
+
+  &-content {
+    @apply flex flex-col bg-[url('../../images/background.svg')] bg-cover bg-center bg-no-repeat bg-blue-dark rounded-[40px] w-[1000px] px-[40px] py-[20px];
+
+    &-head {
+      @apply flex justify-center items-center;
+
+      &-title {
+        @apply font-base text-[32px] font-[600] text-grey-white-light;
+      }
+
+      &-close-btn {
+        @apply border-none bg-transparent cursor-pointer relative left-[380px];
+
+        &-image {
+          @apply w-[25px] h-[25px];
+        }
+      }
+    }
+
+    &-form {
+      @apply flex flex-col;
+
+      &-button {
+        @apply bg-purple border-[2px] border-solid border-purple rounded-[12px] font-base text-[16px] text-[#FFF] p-[16px] mt-[40px] cursor-pointer w-[500px] self-center;
+      }
+    }
+  }
+}
+
+.modal.inactive {
+  @apply hidden;
+}
