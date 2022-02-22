@@ -1,0 +1,15 @@
+.modal-input {
+  @apply flex flex-col bg-[#000]/10 border-[1px] border-solid border-grey-blue-dark rounded-[12px] font-base px-[15px] py-[10px] my-[12px];
+
+  &-Label {
+    @apply text-[14px] text-grey-blue-light;
+  }
+
+  &-field {
+    @apply bg-transparent border-none text-[16px] text-grey-white-dark py-[5px];
+  }
+
+  &-field:focus {
+    @apply outline-none border-none;
+  }
+}
