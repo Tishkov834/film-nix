@@ -9,7 +9,7 @@ function UserPage() {
     <div>
       <h1>User page</h1>
       <Button type="button" onClick={() => setCreateFilmModalOpen(true)}>Add Film</Button>
-      <CreateFilmModal active={isCreateFilmModalOpen} closeModal={setCreateFilmModalOpen} />
+      {isCreateFilmModalOpen && <CreateFilmModal closeModal={() => setCreateFilmModalOpen(false)} />}
     </div>
   );
 }

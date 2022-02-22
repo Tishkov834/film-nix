@@ -1,26 +1,54 @@
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Form, Formik } from 'formik';
+import { useAlert } from 'react-alert';
 import ModalInput from './ModalInput';
 import close from '../../images/icons/close-icon.svg';
+import { createFilm } from '../../api/films';
+import { createFilmSchema } from '../../schemas/modalSchema';
 import './styles.scss';
 
-function CreateFilmModal({
-  active,
-  closeModal,
-  onSubmit,
-  initialValues,
-  validationSchema,
-}) {
+function CreateFilmModal({ closeModal }) {
+  const [isLoading, setIsLoading] = useState(false);
+  const alert = useAlert();
+  const userId = useSelector(({ authorization }) => authorization.user.id);
+
+  const initialValues = {
+    name: '',
+    imageUrl: '',
+    trailerUrl: '',
+    year: '',
+    genre: '',
+    producer: '',
+    distributor: '',
+  };
+
+  const handleCreateFilm = (formValues) => {
+    const fullFilmData = { ...formValues, userId };
+    setIsLoading(true);
+
+    createFilm(fullFilmData)
+      .then(() => {
+        closeModal();
+        alert.show('Film was Create!');
+      })
+      .catch(({ message }) => alert.error(message))
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
   return (
-    <div className={active ? 'modal' : 'modal inactive'}>
+    <div className="modal">
       <div className="modal-content">
         <div className="modal-content-head">
           <h1 className="modal-content-head-title">Add new film</h1>
-          <button className="modal-content-head-close-btn" onClick={() => closeModal(false)}>
+          <button className="modal-content-head-close-btn" onClick={() => closeModal()}>
             <img className="modal-content-head-close-btn-image" src={close} alt="close" />
           </button>
         </div>
-        <Formik onSubmit={onSubmit} initialValues={initialValues} validationSchema={validationSchema}>
+        <Formik onSubmit={handleCreateFilm} initialValues={initialValues} validationSchema={createFilmSchema}>
           <Form className="modal-content-form">
             <ModalInput type="text" name="name" placeholderText="eg. Avenger" labelName="Name" />
             <ModalInput type="text" name="imageUrl" placeholderText="eg. https://Avenger.jpeg" labelName="Image url" />
@@ -30,7 +58,7 @@ function CreateFilmModal({
             <ModalInput type="text" name="director" placeholderText="eg. Anthony Russo" labelName="Director" />
             <ModalInput type="text" name="producer" placeholderText="eg. Kevin Feige" labelName="Producer" />
             <ModalInput type="text" name="distributor" placeholderText="eg. Walt Disney" labelName="Distributor" />
-            <button className="modal-content-form-button" type="submit">Add Film</button>
+            <button className="modal-content-form-button" type="submit" disabled={isLoading}>Add Film</button>
           </Form>
         </Formik>
       </div>
@@ -39,19 +67,11 @@ function CreateFilmModal({
 }
 
 CreateFilmModal.propTypes = {
-  active: PropTypes.bool,
   closeModal: PropTypes.func,
-  onSubmit: PropTypes.func,
-  initialValues: PropTypes.instanceOf(Object),
-  validationSchema: PropTypes.instanceOf(Object),
 };
 
 CreateFilmModal.defaultProps = {
-  active: false,
   closeModal: () => {},
-  onSubmit: () => {},
-  initialValues: {},
-  validationSchema: {},
 };
 
 export default CreateFilmModal;
