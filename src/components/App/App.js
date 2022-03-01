@@ -10,12 +10,14 @@ import Header from '../Header';
 import UserPage from '../../pages/UserPage';
 import GuestRoute from '../GuestRoute';
 import PrivateRoute from '../PrivateRoute';
+import AddFilmPage from '../../pages/AddFilmPage';
 import store, { persistor } from '../../store';
 import {
   HOME_PAGE,
   LOGIN,
   REGISTRATION,
   USER_PAGE,
+  ADD_FILM_PAGE,
 } from '../../constants/routes';
 import './styles.scss';
 
@@ -37,6 +39,7 @@ function App() {
                 <Route path={REGISTRATION} element={<GuestRoute component={RegistrationPage} />} />
                 <Route path={LOGIN} element={<GuestRoute component={LoginPage} />} />
                 <Route path={USER_PAGE} element={<PrivateRoute component={UserPage} />} />
+                <Route path={ADD_FILM_PAGE} element={<PrivateRoute component={AddFilmPage} />} />
               </Routes>
             </div>
           </PersistGate>
