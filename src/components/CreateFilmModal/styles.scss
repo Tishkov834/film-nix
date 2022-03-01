@@ -1,8 +1,8 @@
 .modal {
-  @apply overflow-scroll overflow-x-hidden fixed flex flex-col items-center justify-center inset-0 bg-[#000]/70;
+  @apply fixed flex flex-col items-center justify-center inset-0 bg-[#000]/70;
 
   &-content {
-    @apply flex flex-col bg-[url('../../images/background.svg')] bg-cover bg-center bg-no-repeat bg-blue-dark rounded-[40px] w-[1000px] px-[40px] py-[20px];
+    @apply overflow-auto flex flex-col bg-[url('../../images/background.svg')] bg-cover bg-center bg-no-repeat bg-blue-dark rounded-[40px] w-[1000px] px-[40px] py-[20px];
 
     &-head {
       @apply flex justify-center items-center;
