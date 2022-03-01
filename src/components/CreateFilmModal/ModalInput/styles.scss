@@ -1,15 +1,31 @@
-.modal-input {
-  @apply flex flex-col bg-[#000]/10 border-[1px] border-solid border-grey-blue-dark rounded-[12px] font-base px-[15px] py-[10px] my-[12px];
+.modal-field {
+  @apply flex flex-col w-full;
 
-  &-Label {
-    @apply text-[14px] text-grey-blue-light;
-  }
+  &-input {
+    @apply flex items-center;
 
-  &-field {
-    @apply bg-transparent border-none text-[16px] text-grey-white-dark py-[5px];
-  }
+    &-text {
+      @apply w-full flex flex-col bg-[#000]/10 border-[1px] border-solid border-grey-blue-dark rounded-[12px] font-base pl-[15px] py-[10px] my-[12px];
 
-  &-field:focus {
-    @apply outline-none border-none;
+      &-label {
+        @apply text-[14px] text-grey-blue-light;
+      }
+
+      &-field {
+        @apply bg-transparent border-none text-[16px] text-grey-white-dark py-[5px];
+      }
+
+      &-field:focus {
+        @apply outline-none border-none;
+      }
+    }
+
+    &-del-btn {
+      @apply border-none bg-transparent cursor-pointer pl-[30px];
+
+      &-image {
+        @apply w-[15px] h-[15px];
+      }
+    }
   }
 }

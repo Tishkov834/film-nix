@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Form, Formik } from 'formik';
 import { useAlert } from 'react-alert';
 import ModalInput from './ModalInput';
+import CastForm from './CastForm';
 import close from '../../images/icons/close-icon.svg';
 import { createFilm } from '../../api/films';
 import { createFilmSchema } from '../../schemas/modalSchema';
@@ -22,6 +23,8 @@ function CreateFilmModal({ closeModal }) {
     genre: '',
     producer: '',
     distributor: '',
+    director: '',
+    cast: [],
   };
 
   const handleCreateFilm = (formValues) => {
@@ -58,6 +61,7 @@ function CreateFilmModal({ closeModal }) {
             <ModalInput type="text" name="director" placeholderText="eg. Anthony Russo" labelName="Director" />
             <ModalInput type="text" name="producer" placeholderText="eg. Kevin Feige" labelName="Producer" />
             <ModalInput type="text" name="distributor" placeholderText="eg. Walt Disney" labelName="Distributor" />
+            <CastForm />
             <button className="modal-content-form-button" type="submit" disabled={isLoading}>Add Film</button>
           </Form>
         </Formik>
