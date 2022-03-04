@@ -1,15 +1,12 @@
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../../components/common/Button';
-import CreateFilmModal from '../../components/CreateFilmModal';
+import { ADD_FILM_PAGE } from '../../constants/routes';
 
 function UserPage() {
-  const [isCreateFilmModalOpen, setCreateFilmModalOpen] = useState(false);
-
   return (
     <div>
       <h1>User page</h1>
-      <Button type="button" onClick={() => setCreateFilmModalOpen(true)}>Add Film</Button>
-      {isCreateFilmModalOpen && <CreateFilmModal closeModal={() => setCreateFilmModalOpen(false)} />}
+      <Link to={ADD_FILM_PAGE}><Button type="button">Add Film</Button></Link>
     </div>
   );
 }
