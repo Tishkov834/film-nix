@@ -1,7 +1,7 @@
 import { FieldArray } from 'formik';
-import add from '../../../images/icons/add-icon.svg';
-import close from '../../../images/icons/close-icon.svg';
-import ModalInput from '../ModalInput';
+import add from '../../images/icons/add-icon.svg';
+import close from '../../images/icons/close-icon.svg';
+import AddFilmInput from '../common/AddFilmInput';
 import './styles.scss';
 
 function CastForm() {
@@ -23,7 +23,7 @@ function CastForm() {
               <ul className="cast-list">
                 {cast.map((actor, index) => (
                   <li className="cast-list-actor">
-                    <ModalInput
+                    <AddFilmInput
                       type="text"
                       name={`cast[${index}]`}
                       placeholderText="eg. Robert Downey Jr."

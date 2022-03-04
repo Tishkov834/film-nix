@@ -1,8 +1,8 @@
-.modal {
-  @apply fixed flex flex-col items-center justify-center inset-0 bg-[#000]/70;
+.add-film {
+  @apply flex flex-col items-center justify-center;
 
   &-content {
-    @apply overflow-auto flex flex-col bg-[url('../../images/background.svg')] bg-cover bg-center bg-no-repeat bg-blue-dark rounded-[40px] w-[1000px] px-[40px] py-[20px];
+    @apply flex flex-col w-[1000px] px-[40px] py-[20px];
 
     &-head {
       @apply flex justify-center items-center;
@@ -10,12 +10,11 @@
       &-title {
         @apply font-base text-[32px] font-[600] text-grey-white-light;
       }
-
-      &-close-btn {
-        @apply border-none bg-transparent cursor-pointer relative left-[380px];
+      &-back-link {
+        @apply border-none bg-transparent cursor-pointer relative right-[500px];
 
         &-image {
-          @apply w-[25px] h-[25px];
+          @apply w-[75px] h-[55px];
         }
       }
     }

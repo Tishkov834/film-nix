@@ -2,19 +2,19 @@ import PropTypes from 'prop-types';
 import { ErrorMessage, Field } from 'formik';
 import './styles.scss';
 
-function ModalInput({
+function AddFilmInput({
   type, name, placeholderText, labelName, onButtonClick, buttonIcon, isButtonShown,
 }) {
   return (
-    <div className="modal-field">
-      <div className="modal-field-input">
-        <div className="modal-field-input-text">
-          <label htmlFor={type} className="modal-field-input-text-label">{labelName}</label>
-          <Field className="modal-field-input-text-field" type={type} name={name} placeholder={placeholderText} />
+    <div className="field">
+      <div className="field-input">
+        <div className="field-input-text">
+          <label htmlFor={type} className="field-input-text-label">{labelName}</label>
+          <Field className="field-input-text-field" type={type} name={name} placeholder={placeholderText} />
         </div>
         {isButtonShown && (
-        <button className="modal-field-input-del-btn" type="button" onClick={onButtonClick}>
-          <img className="modal-field-input-del-btn-image" src={buttonIcon} alt="close" />
+        <button className="field-input-del-btn" type="button" onClick={onButtonClick}>
+          <img className="field-input-del-btn-image" src={buttonIcon} alt="close" />
         </button>
         )}
       </div>
@@ -23,7 +23,7 @@ function ModalInput({
   );
 }
 
-ModalInput.propTypes = {
+AddFilmInput.propTypes = {
   placeholderText: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.string,
@@ -33,7 +33,7 @@ ModalInput.propTypes = {
   isButtonShown: PropTypes.bool,
 };
 
-ModalInput.defaultProps = {
+AddFilmInput.defaultProps = {
   placeholderText: '',
   name: '',
   type: '',
@@ -43,4 +43,4 @@ ModalInput.defaultProps = {
   isButtonShown: false,
 };
 
-export default ModalInput;
+export default AddFilmInput;
