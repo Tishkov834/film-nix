@@ -9,7 +9,7 @@ function FilmsList({ films }) {
         name, year, imageUrl, id,
       }) => (
         <li className="films-list-card" key={id}>
-          <FilmCard imageUrl={imageUrl} name={name} year={year} />
+          <FilmCard imageUrl={imageUrl} name={name} year={year} id={id} />
         </li>
       ))}
     </ul>
