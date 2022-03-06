@@ -1,0 +1,11 @@
+.info-field {
+  @apply my-[20px];
+
+  &-title {
+    @apply font-base text-[16px] font-[400] text-grey-blue-light leading-[24px];
+  }
+
+  &-text {
+    @apply font-base text-[20px] font-[400] text-grey-white-light leading-[32px] my-[8px];
+  }
+}
