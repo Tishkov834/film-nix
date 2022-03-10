@@ -1,26 +1,7 @@
 .films-list {
-  @apply w-full flex flex-wrap p-0;
+  @apply flex flex-wrap p-0;
 
   &-card {
-    @apply list-none w-1/5 flex flex-col bg-grey-dark/80 rounded-[12px] mr-[50px] mb-[30px] p-[8px] cursor-pointer;
-
-    &-image {
-      @apply rounded-[12px];
-    }
-
-    &-info {
-      @apply flex justify-between items-center py-[23px];
-
-      &-name {
-        @apply font-base text-[16px] font-[600] text-white-light leading-[24px] tracking-[.02em] m-[8px];
-      }
-      &-year {
-        @apply font-base text-[16px] font-[600] text-white-light/20 leading-[24px] tracking-[.02em] m-[8px];
-      }
-    }
-  }
-
-  &-card:hover {
-    @apply shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)];
+    @apply list-none w-1/5 mr-[50px] mb-[30px];
   }
 }
