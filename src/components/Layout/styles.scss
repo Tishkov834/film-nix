@@ -1,0 +1,7 @@
+.page {
+  @apply flex flex-col ml-[120px] mt-[50px];
+
+  &-title {
+    @apply font-base text-[64px] font-[600] leading-[80px] tracking-[-.02em] text-white-light;
+  }
+}
