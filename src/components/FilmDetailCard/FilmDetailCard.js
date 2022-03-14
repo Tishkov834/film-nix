@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import ReactPlayer from 'react-player';
 import InfoBox from '../common/InfoBox';
 import './styles.scss';
 
@@ -13,6 +14,7 @@ function FilmDetailCard({ film }) {
     distributor,
     cast,
     story,
+    trailerUrl,
   } = film;
 
   return (
@@ -34,6 +36,7 @@ function FilmDetailCard({ film }) {
         <InfoBox text={producer} title="Producer" />
         <InfoBox text={distributor} title="Distributor" />
         <InfoBox text={cast.join(', ')} title="Cast" />
+        <ReactPlayer width="500px" height="280px" className="card-full-detail-info-trailer" url={trailerUrl} />
       </div>
     </div>
   );
@@ -50,6 +53,7 @@ FilmDetailCard.propTypes = {
     distributor: PropTypes.string,
     story: PropTypes.string,
     cast: PropTypes.instanceOf(Array),
+    trailerUrl: PropTypes.string,
   }),
 };
 

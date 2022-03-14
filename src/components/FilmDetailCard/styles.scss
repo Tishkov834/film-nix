@@ -23,5 +23,9 @@
 
   &-detail-info {
     @apply flex flex-col;
+
+    &-trailer {
+      @apply self-center mt-[50px];
+    }
   }
 }
