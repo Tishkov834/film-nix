@@ -1,4 +1,4 @@
-.card {
+.card-body {
   @apply flex flex-col w-full bg-grey-dark/80 rounded-[12px] p-[8px] cursor-pointer;
 
   &-image {
@@ -16,6 +16,10 @@
       @apply font-base text-[16px] font-[600] text-white-light/20 leading-[24px] tracking-[.02em] m-[8px];
     }
   }
+}
+
+.card-link {
+  @apply no-underline;
 }
 
 .card:hover {
