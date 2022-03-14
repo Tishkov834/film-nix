@@ -12,6 +12,7 @@ function FilmDetailCard({ film }) {
     producer,
     distributor,
     cast,
+    story,
   } = film;
 
   return (
@@ -28,6 +29,7 @@ function FilmDetailCard({ film }) {
         <img className="card-full-main-info-image" src={imageUrl} alt={name} />
       </div>
       <div className="card-full-detail-info">
+        <InfoBox text={story} title="Story" />
         <InfoBox text={director} title="Director" />
         <InfoBox text={producer} title="Producer" />
         <InfoBox text={distributor} title="Distributor" />
@@ -46,6 +48,7 @@ FilmDetailCard.propTypes = {
     director: PropTypes.string,
     producer: PropTypes.string,
     distributor: PropTypes.string,
+    story: PropTypes.string,
     cast: PropTypes.instanceOf(Array),
   }),
 };
