@@ -3,14 +3,21 @@ import { ErrorMessage, Field } from 'formik';
 import './styles.scss';
 
 function AddFilmInput({
-  type, name, placeholderText, labelName, onButtonClick, buttonIcon, isButtonShown,
+  type,
+  name,
+  placeholderText,
+  labelName,
+  onButtonClick,
+  buttonIcon,
+  isButtonShown,
+  component,
 }) {
   return (
     <div className="field">
       <div className="field-input">
         <div className="field-input-text">
           <label htmlFor={type} className="field-input-text-label">{labelName}</label>
-          <Field className="field-input-text-field" type={type} name={name} placeholder={placeholderText} />
+          <Field className="field-input-text-field" type={type} name={name} placeholder={placeholderText} component={component} />
         </div>
         {isButtonShown && (
         <button className="field-input-del-btn" type="button" onClick={onButtonClick}>
@@ -31,6 +38,7 @@ AddFilmInput.propTypes = {
   onButtonClick: PropTypes.func,
   buttonIcon: PropTypes.string,
   isButtonShown: PropTypes.bool,
+  component: PropTypes.string,
 };
 
 AddFilmInput.defaultProps = {
@@ -41,6 +49,7 @@ AddFilmInput.defaultProps = {
   onButtonClick: () => {},
   buttonIcon: '',
   isButtonShown: false,
+  component: 'input',
 };
 
 export default AddFilmInput;

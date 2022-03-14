@@ -26,6 +26,7 @@ function AddFilmPage() {
     producer: '',
     distributor: '',
     director: '',
+    story: '',
     cast: [],
   };
 
@@ -63,6 +64,7 @@ function AddFilmPage() {
             <AddFilmInput type="text" name="director" placeholderText="eg. Anthony Russo" labelName="Director" />
             <AddFilmInput type="text" name="producer" placeholderText="eg. Kevin Feige" labelName="Producer" />
             <AddFilmInput type="text" name="distributor" placeholderText="eg. Walt Disney" labelName="Distributor" />
+            <AddFilmInput component="textarea" type="text" name="story" placeholderText="Short film description" labelName="Story" />
             <CastForm />
             <button className="add-film-content-form-button" type="submit" disabled={isLoading}>Add Film</button>
           </Form>
