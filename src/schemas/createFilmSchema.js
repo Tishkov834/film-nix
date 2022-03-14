@@ -9,5 +9,6 @@ export const createFilmSchema = yup.object().shape({
   director: yup.string().required('Director is required'),
   producer: yup.string(),
   distributor: yup.string(),
+  story: yup.string().required('Story is required'),
   cast: yup.array().of(yup.string().required('Actor is required')),
 });
