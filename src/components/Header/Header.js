@@ -1,10 +1,16 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { HOME_PAGE, LOGIN, REGISTRATION } from '../../constants/routes';
+import {
+  HOME_PAGE,
+  LOGIN,
+  REGISTRATION,
+  USER_PAGE,
+} from '../../constants/routes';
 import { removeUser } from '../../store/authorization/authReducer';
 import Logo from '../../images/logo.svg';
 import Login from '../../images/icons/login.svg';
 import Logout from '../../images/icons/logout.svg';
+import User from '../../images/icons/user-icon.svg';
 import './styles.scss';
 
 function Header() {
@@ -25,10 +31,21 @@ function Header() {
         <p className="header-text">Film&NIX</p>
       </Link>
       {isUserAuthorized ? (
-        <button className="header-button" onClick={handleLogout}>
-          <p className="header-text">Logout</p>
-          <img src={Logout} alt="login" className="header-link-image" />
-        </button>
+        <div className="header-link">
+          <button className="header-button" onClick={handleLogout}>
+            <p className="header-text">Logout</p>
+            <img src={Logout} alt="logout" className="header-link-image" />
+          </button>
+          {(pathname === USER_PAGE)
+            ? (
+              <img src={User} alt="user" className="header-link-user-border" />
+            )
+            : (
+              <Link to={USER_PAGE} className="header-link-user">
+                <img src={User} alt="user" className="header-link-user-image" />
+              </Link>
+            )}
+        </div>
       ) : (
         <Link to={(pathname === LOGIN) ? REGISTRATION : LOGIN} className="header-link">
           <p className="header-text">{(pathname === LOGIN) ? 'Registration' : 'Login'}</p>

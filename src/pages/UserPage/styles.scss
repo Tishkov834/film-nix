@@ -1,0 +1,11 @@
+.user-page {
+  @apply flex items-center;
+
+  &-title {
+    @apply font-base text-[36px] font-[600] leading-[80px] tracking-[-.02em] text-white-light mr-[50px] my-0;
+  }
+
+  &-link {
+    @apply bg-purple border-[2px] border-solid border-purple rounded-[12px] font-base text-[16px] text-[#FFF] p-[12px] cursor-pointer no-underline;
+  }
+}
