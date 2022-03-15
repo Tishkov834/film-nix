@@ -6,3 +6,5 @@ export const createFilm = (filmData) => axiosInstance.post(FILMS_URL, filmData);
 export const getAllFilms = () => axiosInstance.get(FILMS_URL);
 
 export const getFilm = (id) => axiosInstance.get(`${FILMS_URL}/${id}`);
+
+export const getUserFilms = (userId) => axiosInstance.get(`${FILMS_URL}?userId=${userId}`);
