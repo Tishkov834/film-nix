@@ -17,13 +17,17 @@ function UserPage() {
       .catch(({ message }) => alert.error(message));
   }, []);
 
+  const onFilmDelete = (filmId) => {
+    setFilms(films.filter((film) => film.id !== filmId));
+  };
+
   return (
     <Layout titleText={`Welcome, ${name}`}>
       <div className="user-page">
         <h1 className="user-page-title">My movies</h1>
         <Link to={ADD_FILM_PAGE} className="user-page-link">Add Film</Link>
       </div>
-      <FilmsList films={films} />
+      <FilmsList films={films} onFilmDelete={onFilmDelete} />
     </Layout>
   );
 }
