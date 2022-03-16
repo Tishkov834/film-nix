@@ -1,9 +1,13 @@
 .card-body {
   @apply flex flex-col w-full bg-grey-dark/80 rounded-[12px] p-[8px] cursor-pointer;
 
-  &-image {
-    @apply rounded-[12px];
-  }
+    &-image {
+      @apply rounded-[12px];
+    }
+
+    &-button {
+      @apply bg-purple border-[2px] border-solid border-purple rounded-[12px] font-base text-[16px] text-[#FFF] p-[16px] cursor-pointer uppercase mt-[20px];
+    }
 
   &-info {
     @apply flex justify-between items-center py-[23px];
