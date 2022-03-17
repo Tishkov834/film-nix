@@ -1,0 +1,11 @@
+.search-form {
+  @apply flex w-[350px] items-center border-[1px] border-solid border-grey-blue-dark rounded-[12px] font-base px-[30px] py-[20px];
+
+  &-image {
+    @apply w-[30px] h-[30px];
+  }
+
+  &-input {
+    @apply bg-transparent border-none text-[16px] font-[400] leading-[16px] font-base text-grey-blue-light ml-[20px] outline-none;
+  }
+}
