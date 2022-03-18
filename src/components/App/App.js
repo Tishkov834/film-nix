@@ -12,6 +12,7 @@ import GuestRoute from '../GuestRoute';
 import PrivateRoute from '../PrivateRoute';
 import AddFilmPage from '../../pages/AddFilmPage';
 import FilmPage from '../../pages/FilmPage';
+import SearchResultPage from '../../pages/SearchResultPage';
 import store, { persistor } from '../../store';
 import {
   HOME_PAGE,
@@ -20,6 +21,7 @@ import {
   USER_PAGE,
   ADD_FILM_PAGE,
   FILM_PAGE,
+  SEARCH_RESULT_PAGE,
 } from '../../constants/routes';
 import './styles.scss';
 
@@ -39,6 +41,7 @@ function App() {
               <Routes>
                 <Route exact path={HOME_PAGE} element={<HomePage />} />
                 <Route path={`${FILM_PAGE}/:id`} element={<FilmPage />} />
+                <Route path={SEARCH_RESULT_PAGE} element={<SearchResultPage />} />
                 <Route path={REGISTRATION} element={<GuestRoute component={RegistrationPage} />} />
                 <Route path={LOGIN} element={<GuestRoute component={LoginPage} />} />
                 <Route path={USER_PAGE} element={<PrivateRoute component={UserPage} />} />

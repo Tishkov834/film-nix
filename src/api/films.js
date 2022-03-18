@@ -10,3 +10,5 @@ export const getFilm = (id) => axiosInstance.get(`${FILMS_URL}/${id}`);
 export const getUserFilms = (userId) => axiosInstance.get(`${FILMS_URL}?userId=${userId}`);
 
 export const removeFilm = (id) => axiosInstance.delete(`${FILMS_URL}/${id}`);
+
+export const searchFilms = (query) => axiosInstance.get(`${FILMS_URL}?q=${query}`);
