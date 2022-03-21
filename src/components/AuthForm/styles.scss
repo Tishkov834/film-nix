@@ -2,7 +2,7 @@
   @apply flex flex-col m-auto;
 
   &-heading {
-    @apply font-base text-[64px] text-grey-white-light;
+    @apply font-base text-6xl text-grey-white-light;
   }
 
   &-content {
@@ -10,14 +10,14 @@
   }
 
   &-redirect {
-    @apply flex items-center mt-[20px];
+    @apply flex items-center mt-5;
 
     &-text {
-      @apply font-base text-[16px] text-grey-white-dark font-[600];
+      @apply font-base text-base text-grey-white-dark font-semibold;
     }
 
     &-link {
-      @apply font-base text-[16px] text-grey-white/30 font-[600] no-underline ml-[5px];
+      @apply font-base text-base text-grey-white/30 font-semibold no-underline ml-1.5;
     }
   }
 }

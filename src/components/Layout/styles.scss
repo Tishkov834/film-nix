@@ -1,7 +1,7 @@
 .page {
-  @apply flex flex-col ml-[120px] mt-[50px];
+  @apply flex flex-col ml-28 mt-12;
 
   &-title {
-    @apply font-base text-[64px] font-[600] leading-[80px] tracking-[-.02em] text-white-light;
+    @apply font-base text-6xl font-semibold text-white-light;
   }
 }

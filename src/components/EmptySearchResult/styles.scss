@@ -2,10 +2,10 @@
   @apply flex flex-col items-center;
 
   &-image {
-    @apply w-[500px] h-[420px];
+    @apply w-128 h-100;
   }
 
   &-text {
-    @apply font-base text-white-light/20 text-[42px] font-[600] leading-[56px];
+    @apply font-base text-white-light/20 text-4xl font-semibold;
   }
 }

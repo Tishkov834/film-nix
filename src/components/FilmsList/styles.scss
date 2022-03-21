@@ -1,7 +1,7 @@
 .films-list {
-  @apply flex flex-wrap p-0 mt-[50px];
+  @apply flex flex-wrap p-0 mt-12;
 
   &-card {
-    @apply list-none w-1/5 mr-[50px] mb-[30px];
+    @apply list-none w-1/5 mr-12 mb-8;
   }
 }
