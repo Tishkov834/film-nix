@@ -1,23 +1,23 @@
 .card-full {
-  @apply flex mx-[100px];
+  @apply flex mx-24;
 
   &-main-info {
-    @apply flex flex-col my-[20px] mx-[25px];
+    @apply flex flex-col my-5 mx-6;
 
     &-title {
-      @apply w-[500px] flex flex-col bg-grey-dark/80 rounded-[24px] p-[40px];
+      @apply w-[31rem] flex flex-col bg-grey-dark/80 rounded-3xl p-10;
 
       &-year-genre {
-        @apply font-base text-[12px] font-[400] text-purple-light leading-[16px];
+        @apply font-base text-xs font-normal text-purple-light;
       }
 
       &-name {
-        @apply font-base text-[32px] font-[600] text-white-light leading-[40px] tracking-[.02em] m-0;
+        @apply font-base text-3xl font-semibold text-white-light m-0;
       }
     }
 
     &-image {
-      @apply w-[580px] h-[800px] rounded-[24px] my-[20px];
+      @apply w-[36rem] h-[44rem] rounded-3xl my-5;
     }
   }
 
@@ -25,7 +25,7 @@
     @apply flex flex-col;
 
     &-trailer {
-      @apply self-center mt-[50px];
+      @apply self-center mt-12;
     }
   }
 }

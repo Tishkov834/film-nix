@@ -1,7 +1,7 @@
 .input {
-  @apply w-[550px] bg-[#000]/10 border-[1px] border-solid border-grey-blue-dark rounded-[12px] font-base text-[14px] text-grey-blue-light p-[24px] my-[8px];
+  @apply w-[35rem] bg-[#000]/10 border border-solid border-grey-blue-dark rounded-xl font-base text-sm text-grey-blue-light p-6 my-2;
 }
 
 .error {
-  @apply font-base text-[14px] text-red-light tracking-[.02em];
+  @apply font-base text-sm text-red-light;
 }

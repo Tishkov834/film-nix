@@ -3,14 +3,14 @@
     @apply flex items-center;
 
     &-title {
-      @apply font-base text-[24px] font-[400] text-grey-white-dark/70 uppercase;
+      @apply font-base text-2xl font-normal text-grey-white-dark/70 uppercase;
     }
 
     &-add-btn {
       @apply border-none bg-transparent cursor-pointer;
 
       &-image {
-        @apply w-[35px] h-[35px];
+        @apply w-9 h-9;
       }
     }
   }
@@ -22,10 +22,10 @@
       @apply list-none flex;
 
       &-del-btn {
-        @apply border-none bg-transparent cursor-pointer pl-[30px];
+        @apply border-none bg-transparent cursor-pointer pl-8;
 
         &-image {
-          @apply w-[15px] h-[15px];
+          @apply w-4 h-4;
         }
       }
     }

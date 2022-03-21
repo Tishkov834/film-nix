@@ -1,31 +1,27 @@
 .card-body {
-  @apply flex flex-col w-full bg-grey-dark/80 rounded-[12px] p-[8px] cursor-pointer;
+  @apply flex flex-col w-full bg-grey-dark/80 rounded-xl p-2 cursor-pointer;
 
     &-image {
-      @apply rounded-[12px];
+      @apply rounded-xl;
     }
 
     &-button {
-      @apply bg-purple border-[2px] border-solid border-purple rounded-[12px] font-base text-[16px] text-[#FFF] p-[16px] cursor-pointer uppercase mt-[20px];
+      @apply bg-purple border-2 border-solid border-purple rounded-xl font-base text-base text-[#FFF] p-4 cursor-pointer uppercase mt-5;
     }
 
   &-info {
-    @apply flex justify-between items-center py-[23px];
+    @apply flex justify-between items-center py-6;
 
     &-name {
-      @apply font-base text-[16px] font-[600] text-white-light leading-[24px] tracking-[.02em] m-[8px];
+      @apply font-base text-base font-semibold text-white-light m-2;
     }
 
     &-year {
-      @apply font-base text-[16px] font-[600] text-white-light/20 leading-[24px] tracking-[.02em] m-[8px];
+      @apply font-base text-base font-semibold text-white-light/20 m-2;
     }
   }
 }
 
 .card-link {
   @apply no-underline;
-}
-
-.card:hover {
-  @apply shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)];
 }
