@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import FilmsList from '../../components/FilmsList';
 import Layout from '../../components/Layout';
 import Loader from '../../components/Loader';
+import EmptyFilmsMessage from '../../components/EmptyFilmsMessage';
 import { ADD_FILM_PAGE } from '../../constants/routes';
 import { getUserFilms } from '../../api/films';
 import './styles.scss';
@@ -34,8 +35,7 @@ function UserPage() {
         <h1 className="user-page-title">My movies</h1>
         <Link to={ADD_FILM_PAGE} className="user-page-link">Add Film</Link>
       </div>
-      <FilmsList films={films} onFilmDelete={onFilmDelete} />
-      {isLoading && <Loader />}
+      {films.length ? <FilmsList films={films} onFilmDelete={onFilmDelete} /> : isLoading && <Loader /> || <EmptyFilmsMessage text={"You haven't added any films yet"} />}
     </Layout>
   );
 }
