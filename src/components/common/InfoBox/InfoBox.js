@@ -2,11 +2,13 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 function InfoBox({ title, text }) {
-  return (
+  return (text
+    && (
     <div className="info-field">
       <span className="info-field-title">{title}</span>
       <p className="info-field-text">{text}</p>
     </div>
+    )
   );
 }
 
