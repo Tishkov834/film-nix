@@ -11,6 +11,7 @@ import AddFilmInput from '../../components/common/AddFilmInput';
 import CastForm from '../../components/CastForm';
 import Loader from '../../components/Loader';
 import './styles.scss';
+import Button from '../../components/common/Button';
 
 function AddFilmPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -67,10 +68,10 @@ function AddFilmPage() {
             <AddFilmInput type="text" name="distributor" placeholderText="eg. Walt Disney" labelName="Distributor" />
             <AddFilmInput component="textarea" type="text" name="story" placeholderText="Short film description" labelName="Story" />
             <CastForm />
-            <button className="add-film-content-form-button" type="submit" disabled={isLoading}>
+            <Button className="add-film-content-form-button" type="submit" isDisabled={isLoading}>
               {isLoading && <Loader height="30" width="30" />}
               Add Film
-            </button>
+            </Button>
           </Form>
         </Formik>
       </div>
