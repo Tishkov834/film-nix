@@ -32,10 +32,6 @@ function Header() {
       </Link>
       {isUserAuthorized ? (
         <div className="header-link">
-          <button className="header-button" onClick={handleLogout}>
-            <p className="header-text">Logout</p>
-            <img src={Logout} alt="logout" className="header-link-image" />
-          </button>
           {(pathname === USER_PAGE)
             ? (
               <img src={User} alt="user" className="header-link-user-border" />
@@ -45,6 +41,10 @@ function Header() {
                 <img src={User} alt="user" className="header-link-user-image" />
               </Link>
             )}
+          <button className="header-button" onClick={handleLogout}>
+            <p className="header-text">Logout</p>
+            <img src={Logout} alt="logout" className="header-link-image" />
+          </button>
         </div>
       ) : (
         <Link to={(pathname === LOGIN) ? REGISTRATION : LOGIN} className="header-link">
