@@ -2,7 +2,10 @@ import * as yup from 'yup';
 
 export const createFilmSchema = yup.object().shape({
   name: yup.string().required('Name is required'),
-  imageUrl: yup.string().required('Image url is required'),
+  imageUrl: yup.string().matches(
+    /https?:\/\/.*\.(?:png|jpg)/,
+    'Url is not available',
+  ).required('Image url is required'),
   trailerUrl: yup.string().matches(
     /^(https?\:\/\/)?(www\.youtube\.com|youtu\.be)\/.+$/,
     'Url is not available, please using youtube url',

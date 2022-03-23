@@ -38,7 +38,7 @@ function AddFilmPage() {
 
     createFilm(fullFilmData)
       .then(() => {
-        alert.show('Film was Create!');
+        alert.show('Film was Created!');
         navigate(USER_PAGE);
       })
       .catch(({ message }) => alert.error(message))
@@ -61,7 +61,7 @@ function AddFilmPage() {
             <AddFilmInput type="text" name="name" placeholderText="eg. Avenger" labelName="Name" />
             <AddFilmInput type="text" name="imageUrl" placeholderText="eg. https://Avenger.jpeg" labelName="Image url" />
             <AddFilmInput type="text" name="trailerUrl" placeholderText="eg. https://youtu.be/Avenger-trailer" labelName="Trailer url" />
-            <AddFilmInput type="text" name="year" placeholderText="eg. 2019" labelName="Year" />
+            <AddFilmInput type="number" name="year" placeholderText="eg. 2019" labelName="Year" />
             <AddFilmInput type="text" name="genre" placeholderText="eg. Actions" labelName="Genre" />
             <AddFilmInput type="text" name="director" placeholderText="eg. Anthony Russo" labelName="Director" />
             <AddFilmInput type="text" name="producer" placeholderText="eg. Kevin Feige" labelName="Producer" />
