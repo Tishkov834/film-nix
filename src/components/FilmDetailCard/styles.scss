@@ -17,12 +17,12 @@
     }
 
     &-image {
-      @apply w-[36rem] h-[44rem] rounded-3xl my-5;
+      @apply w-[36rem] h-auto rounded-3xl my-5;
     }
   }
 
   &-detail-info {
-    @apply flex flex-col;
+    @apply flex flex-col w-full;
 
     &-trailer {
       @apply self-center mt-12;
