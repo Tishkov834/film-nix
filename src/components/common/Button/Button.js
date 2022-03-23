@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 function Button({
-  children, onClick, type, isDisabled,
+  children, onClick, type, isDisabled, className,
 }) {
   return (
-    <button className="button" disabled={isDisabled} type={type} onClick={onClick}>{children}</button>
+    <button className={className} disabled={isDisabled} type={type} onClick={onClick}>{children}</button>
   );
 }
 
@@ -18,6 +18,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   type: PropTypes.oneOf(['submit', 'button', 'reset']),
   isDisabled: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -25,6 +26,7 @@ Button.defaultProps = {
   onClick: () => {},
   type: 'button',
   isDisabled: false,
+  className: 'button',
 };
 
 export default Button;
