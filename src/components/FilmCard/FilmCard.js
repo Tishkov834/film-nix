@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import { removeFilm } from '../../api/films';
+import NoPoster from '../../images/no-poster.jpeg';
 import { FILM_PAGE, USER_PAGE } from '../../constants/routes';
 import './styles.scss';
 
@@ -26,7 +27,14 @@ function FilmCard({
   return (
     <Link to={`${FILM_PAGE}/${id}`} className="card-link">
       <div className="card-body">
-        <img className="card-body-image" src={imageUrl} alt={name} />
+        <img
+          className="card-body-image"
+          src={imageUrl}
+          alt={name}
+          onError={(e) => {
+            e.target.src = NoPoster;
+          }}
+        />
         {(pathname === USER_PAGE) && (
         <button
           className="card-body-button"
