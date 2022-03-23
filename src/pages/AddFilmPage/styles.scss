@@ -23,7 +23,7 @@
       @apply flex flex-col;
 
       &-button {
-        @apply bg-purple border-2 border-solid border-purple rounded-xl font-base text-base text-[#FFF] p-4 mt-10 cursor-pointer w-128 self-center;
+        @apply flex items-center justify-center bg-purple border-2 border-solid border-purple rounded-xl font-base text-base text-[#FFF] p-5 mt-10 cursor-pointer w-128 self-center;
       }
     }
   }
