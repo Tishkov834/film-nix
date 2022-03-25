@@ -1,0 +1,11 @@
+.rating {
+  @apply flex m-4;
+
+  &-star {
+    @apply mr-4 w-7 h-7 cursor-pointer;
+
+    &-click {
+      @apply mr-4 w-7 h-7 fill-purple cursor-pointer;
+    }
+  }
+}

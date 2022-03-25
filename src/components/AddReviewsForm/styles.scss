@@ -1,0 +1,11 @@
+.add-review-form {
+  @apply w-[55rem] flex flex-col mx-[7.25rem];
+
+  &-content {
+    @apply flex flex-col bg-black-light rounded p-5;
+  }
+
+  &-button {
+    @apply self-end bg-purple border border-solid border-purple rounded-xl font-base text-base text-[#FFF] py-4 px-5 mt-5 cursor-pointer uppercase;
+  }
+}

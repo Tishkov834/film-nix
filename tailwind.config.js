@@ -59,6 +59,7 @@ module.exports = {
         'white-light': '#EBEEF5',
         'grey-dark': '#20283E',
         'purple-light': '#BEB7FB',
+        'black-light': '#2B3543',
       },
     },
   },
