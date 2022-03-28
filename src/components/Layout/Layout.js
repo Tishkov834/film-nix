@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-function Layout({ titleText, children }) {
+function Layout({ titleText, children, titleClassName }) {
   return (
     <div className="page">
-      <h1 className="page-title">{titleText}</h1>
+      <h1 className={titleClassName}>{titleText}</h1>
       {children}
     </div>
   );
@@ -13,11 +13,13 @@ function Layout({ titleText, children }) {
 Layout.propTypes = {
   titleText: PropTypes.string,
   children: PropTypes.element,
+  titleClassName: PropTypes.string,
 };
 
 Layout.defaultProps = {
   titleText: '',
   children: null,
+  titleClassName: 'page-title',
 };
 
 export default Layout;
