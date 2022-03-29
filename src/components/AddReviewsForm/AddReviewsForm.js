@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Form, Formik } from 'formik';
 import { useParams } from 'react-router-dom';
 import { useAlert } from 'react-alert';
@@ -11,12 +12,13 @@ import { reviewSchema } from '../../schemas/createReviewSchema';
 import { createReview } from '../../api/review';
 import './styles.scss';
 
-function AddReviewsForm() {
+function AddReviewsForm({ onAddReview }) {
   const [isLoading, setIsLoading] = useState(false);
   const [rating, setRating] = useState(0);
   const { id } = useParams();
   const alert = useAlert();
   const userId = useSelector(({ authorization }) => authorization.user.id);
+  const username = useSelector(({ authorization }) => authorization.user.username);
 
   const initialValues = {
     review: '',
@@ -24,14 +26,19 @@ function AddReviewsForm() {
 
   const handleCreateReview = (formValues, { resetForm }) => {
     const filmId = +id;
+    const date = new Date().toLocaleDateString('en-us', {
+      year: 'numeric', month: 'short', day: 'numeric',
+    });
+
     const fullReviewData = {
-      ...formValues, rating, filmId, userId,
+      ...formValues, rating, filmId, userId, username, date,
     };
     setIsLoading(true);
 
     createReview(fullReviewData)
-      .then(() => {
+      .then(({ data }) => {
         alert.show('Review was Created!');
+        onAddReview(data);
       })
       .catch(({ message }) => alert.error(message))
       .finally(() => {
@@ -56,5 +63,13 @@ function AddReviewsForm() {
     </Formik>
   );
 }
+
+AddReviewsForm.propTypes = {
+  onAddReview: PropTypes.func,
+};
+
+AddReviewsForm.defaultProps = {
+  onAddReview: () => {},
+};
 
 export default AddReviewsForm;
