@@ -1,0 +1,7 @@
+.reviews-list {
+  @apply flex flex-col mt-12 p-0;
+
+  &-card {
+    @apply list-none;
+  }
+}
