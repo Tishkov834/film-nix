@@ -1,0 +1,39 @@
+.review-card {
+  @apply w-[55rem] my-8;
+
+  &-body {
+    @apply flex flex-col bg-black-light rounded py-4 px-8 mt-3;
+
+    &-text {
+      @apply font-base text-xl font-normal text-grey-white-light;
+    }
+
+    &-date {
+      @apply font-base text-sm font-normal text-grey-blue-light;
+    }
+  }
+
+  &-triangle {
+    @apply -mt-2 ml-8;
+  }
+
+  &-author {
+    @apply font-base text-lg font-normal text-grey-white-light mt-0 ml-14;
+  }
+}
+
+.user-review-card {
+  @apply w-[55rem] flex flex-col my-4;
+
+  &-title {
+    @apply self-end font-base text-lg text-[#FFF] mr-8 my-3;
+  }
+
+  &-body {
+    @apply flex flex-col bg-purple/30 rounded-xl py-4 px-8;
+
+    &-delete {
+      @apply self-end w-16 bg-purple border border-solid border-purple rounded-xl font-base text-sm text-[#FFF] p-2 cursor-pointer;
+    }
+  }
+}
