@@ -1,5 +1,5 @@
 .add-review-form {
-  @apply w-[55rem] flex flex-col mx-[7.25rem];
+  @apply w-[55rem] flex flex-col my-5;
 
   &-content {
     @apply flex flex-col bg-black-light rounded p-5;
