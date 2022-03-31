@@ -2,10 +2,10 @@
   @apply my-5;
 
   &-title {
-    @apply font-base text-base font-normal text-grey-blue-light;
+    @apply font-base 2xl:text-base lg:text-sm font-normal text-grey-blue-light;
   }
 
   &-text {
-    @apply font-base text-xl font-normal text-grey-white-light my-2;
+    @apply font-base 2xl:text-xl lg:text-base font-normal text-grey-white-light my-2;
   }
 }

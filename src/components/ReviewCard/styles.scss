@@ -1,11 +1,11 @@
 .review-card {
-  @apply w-[55rem] my-8;
+  @apply xl:w-[55rem] sm:w-[35rem] my-8;
 
   &-body {
     @apply flex flex-col bg-black-light rounded py-4 px-8 mt-3;
 
     &-text {
-      @apply font-base text-xl font-normal text-grey-white-light;
+      @apply font-base xl:text-xl sm:text-base font-normal text-grey-white-light;
     }
 
     &-date {
@@ -23,10 +23,10 @@
 }
 
 .user-review-card {
-  @apply w-[55rem] flex flex-col my-4;
+  @apply xl:w-[55rem] sm:w-[35rem] flex flex-col my-4;
 
   &-title {
-    @apply self-end font-base text-lg text-[#FFF] mr-8 my-3;
+    @apply self-end font-base xl:text-lg sm:text-base text-[#FFF] mr-8 my-3;
   }
 
   &-body {

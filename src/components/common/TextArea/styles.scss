@@ -1,5 +1,5 @@
 .text-area {
-  @apply h-40 bg-[#000]/10 border border-solid border-grey-blue-dark rounded-xl font-base text-sm text-grey-white-dark pt-3.5 pl-3.5;
+  @apply xl:h-40 sm:h-32 bg-[#000]/10 border border-solid border-grey-blue-dark rounded-xl font-base text-sm text-grey-white-dark pt-3.5 pl-3.5;
 }
 
 .text-area:focus {
