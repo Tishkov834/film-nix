@@ -2,6 +2,6 @@
   @apply flex flex-wrap p-0 mt-12;
 
   &-card {
-    @apply list-none w-1/5 mr-12 mb-8;
+    @apply list-none 2xl:w-1/5 lg:w-1/4 sm:w-1/2 mr-12 mb-8;
   }
 }

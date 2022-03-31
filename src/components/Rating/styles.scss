@@ -2,10 +2,10 @@
   @apply flex m-4;
 
   &-star {
-    @apply mr-4 w-7 h-7 cursor-pointer;
+    @apply mr-4 xl:w-7 xl:h-7 sm:w-5 sm:h-5 cursor-pointer;
 
     &-click {
-      @apply mr-4 w-7 h-7 fill-purple cursor-pointer;
+      @apply mr-4 xl:w-7 xl:h-7 sm:w-5 sm:h-5 fill-purple cursor-pointer;
     }
   }
 }

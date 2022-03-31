@@ -2,6 +2,6 @@
   @apply flex flex-col ml-28 mt-12;
 
   &-title {
-    @apply font-base text-6xl font-semibold text-white-light;
+    @apply font-base xl:text-6xl sm:text-3xl font-semibold text-white-light;
   }
 }

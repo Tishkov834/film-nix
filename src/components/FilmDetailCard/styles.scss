@@ -1,8 +1,8 @@
 .card-full {
-  @apply flex mx-24;
+  @apply flex mx-24 xl:flex-row sm:flex-col;
 
   &-main-info {
-    @apply flex flex-col my-5 mx-6;
+    @apply flex flex-col my-5 mx-6 sm:items-center;
 
     &-title {
       @apply w-[31rem] flex flex-col bg-grey-dark/80 rounded-3xl p-10;

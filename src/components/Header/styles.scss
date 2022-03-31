@@ -2,7 +2,7 @@
   @apply sticky flex justify-between px-32 py-5 bg-blue-dark/30;
 
   &-text {
-    @apply font-base text-grey-white-dark text-base font-semibold;
+    @apply font-base text-grey-white-dark xl:text-base sm:text-sm font-semibold;
   }
 
   &-button {
