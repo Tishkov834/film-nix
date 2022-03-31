@@ -1,0 +1,19 @@
+.modal {
+  @apply overflow-scroll overflow-x-hidden fixed flex flex-col items-center justify-center inset-0 bg-[#000]/90;
+
+  &-content {
+    @apply flex flex-col bg-blue-dark p-8 rounded-xl;
+
+    &-text {
+      @apply font-base text-xl font-normal text-white;
+    }
+
+    &-buttons {
+      @apply flex justify-between
+    }
+
+    &-button {
+      @apply bg-purple border border-solid border-purple rounded-xl text-base text-[#FFF] p-4 mt-10 cursor-pointer;
+    }
+  }
+}
