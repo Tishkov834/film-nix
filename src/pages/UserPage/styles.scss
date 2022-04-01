@@ -2,10 +2,10 @@
   @apply flex items-center;
 
   &-title {
-    @apply font-base text-[36px] font-[600] leading-[80px] tracking-[-.02em] text-white-light mr-[50px] my-0;
+    @apply font-base sm:text-4xl text-2xl font-semibold text-white-light mr-12 my-0;
   }
 
   &-link {
-    @apply bg-purple border-[2px] border-solid border-purple rounded-[12px] font-base text-[16px] text-[#FFF] p-[12px] cursor-pointer no-underline;
+    @apply bg-purple border-2 border-solid border-purple rounded-xl font-base sm:text-base text-sm text-[#FFF] p-3 cursor-pointer no-underline;
   }
 }
