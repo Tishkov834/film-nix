@@ -1,8 +1,8 @@
 .header {
-  @apply sticky flex justify-between px-32 py-5 bg-blue-dark/30;
+  @apply sticky flex justify-between sm:px-32 px-10 py-5 bg-blue-dark/30;
 
   &-text {
-    @apply font-base text-grey-white-dark xl:text-base sm:text-sm font-semibold;
+    @apply font-base text-grey-white-dark xl:text-base sm:text-sm text-sm font-semibold;
   }
 
   &-button {
@@ -13,7 +13,7 @@
     @apply flex items-center no-underline;
 
     &-image {
-      @apply w-14 h-14;
+      @apply sm:w-14 sm:h-14 w-10 h-10;
     }
   }
 
@@ -24,11 +24,11 @@
       @apply flex no-underline underline-offset-0;
 
       &-image {
-        @apply w-5 h-5 ml-1 mr-9 p-1;
+        @apply w-5 h-5 ml-1 sm:mr-9 mr-3 p-1;
       }
 
       &-border {
-        @apply bg-white/10 w-5 h-5 ml-1 mr-9 rounded-lg border border-solid border-grey-white-dark p-1;
+        @apply bg-white/10 w-5 h-5 ml-1 sm:mr-9 mr-3 rounded-lg border border-solid border-grey-white-dark p-1;
       }
     }
 
