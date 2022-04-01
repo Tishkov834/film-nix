@@ -2,19 +2,20 @@
   @apply flex flex-col items-center justify-center;
 
   &-content {
-    @apply flex flex-col w-200 px-10 py-5;
+    @apply flex flex-col lg:w-200 md:w-128 sm:w-100 w-72 px-10 py-5;
 
     &-head {
       @apply flex justify-center items-center;
 
       &-title {
-        @apply font-base text-3xl font-semibold text-grey-white-light;
+        @apply font-base lg:text-3xl sm:text-2xl text-xl font-semibold text-grey-white-light;
       }
+
       &-back-link {
-        @apply border-none bg-transparent cursor-pointer relative right-128;
+        @apply border-none bg-transparent cursor-pointer relative lg:right-128 md:right-60 sm:right-40 right-16 ;
 
         &-image {
-          @apply w-20 h-14;
+          @apply lg:w-20 lg:h-14 w-16 h-9;
         }
       }
     }
@@ -23,7 +24,7 @@
       @apply flex flex-col;
 
       &-button {
-        @apply flex items-center justify-center bg-purple border-2 border-solid border-purple rounded-xl font-base text-base text-[#FFF] p-5 mt-10 cursor-pointer w-128 self-center;
+        @apply flex items-center justify-center bg-purple border-2 border-solid border-purple rounded-xl font-base text-base text-[#FFF] p-5 mt-10 cursor-pointer lg:w-128 md:w-100 sm:w-80 w-40 self-center;
       }
     }
   }

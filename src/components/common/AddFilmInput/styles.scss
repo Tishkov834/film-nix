@@ -8,11 +8,11 @@
       @apply w-full flex flex-col bg-[#000]/10 border border-solid border-grey-blue-dark rounded-xl font-base pl-4 py-2.5 my-3;
 
       &-label {
-        @apply text-sm text-grey-blue-light;
+        @apply lg:text-sm text-xs text-grey-blue-light;
       }
 
       &-field {
-        @apply bg-transparent border-none text-base font-base text-grey-white-dark py-1.5;
+        @apply bg-transparent border-none lg:text-base sm:text-sm font-base text-grey-white-dark py-1.5;
       }
 
       &-field:focus {
