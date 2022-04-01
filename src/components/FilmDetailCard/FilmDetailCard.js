@@ -36,7 +36,7 @@ function FilmDetailCard({ film }) {
         <InfoBox text={producer} title="Producer" />
         <InfoBox text={distributor} title="Distributor" />
         <InfoBox text={cast.join(', ')} title="Cast" />
-        <ReactPlayer width="600px" height="380px" className="card-full-detail-info-trailer" url={trailerUrl} />
+        <ReactPlayer width="600px" className="card-full-detail-info-trailer" url={trailerUrl} />
       </div>
     </div>
   );
