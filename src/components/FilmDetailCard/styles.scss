@@ -1,31 +1,31 @@
 .card-full {
-  @apply flex mx-24 xl:flex-row sm:flex-col;
+  @apply flex mx-24 xl:flex-row sm:flex-col flex-col;
 
   &-main-info {
-    @apply flex flex-col my-5 mx-6 sm:items-center;
+    @apply flex flex-col my-5 mx-6 sm:items-center items-center;
 
     &-title {
-      @apply w-[31rem] flex flex-col bg-grey-dark/80 rounded-3xl p-10;
+      @apply sm:w-[31rem] w-[18rem] flex flex-col bg-grey-dark/80 rounded-3xl sm:p-10 p-5;
 
       &-year-genre {
         @apply font-base text-xs font-normal text-purple-light;
       }
 
       &-name {
-        @apply font-base text-3xl font-semibold text-white-light m-0;
+        @apply font-base sm:text-3xl text-xl font-semibold text-white-light m-0;
       }
     }
 
     &-image {
-      @apply w-[36rem] h-auto rounded-3xl my-5;
+      @apply sm:w-[36rem] w-[20rem] h-auto rounded-3xl my-5;
     }
   }
 
   &-detail-info {
-    @apply flex flex-col w-full;
+    @apply flex flex-col sm:w-full;
 
     &-trailer {
-      @apply self-center mt-12;
+      @apply self-center mt-12 w-[25rem];
     }
   }
 }

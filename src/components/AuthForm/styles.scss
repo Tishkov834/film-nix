@@ -2,22 +2,22 @@
   @apply flex flex-col m-auto;
 
   &-heading {
-    @apply font-base xl:text-6xl sm:text-3xl text-grey-white-light;
+    @apply font-base xl:text-6xl sm:text-3xl text-xl text-grey-white-light;
   }
 
   &-content {
-    @apply flex flex-col ;
+    @apply flex flex-col;
   }
 
   &-redirect {
     @apply flex items-center mt-5;
 
     &-text {
-      @apply font-base xl:text-base sm:text-sm text-grey-white-dark font-semibold;
+      @apply font-base xl:text-base sm:text-sm text-xs text-grey-white-dark font-semibold;
     }
 
     &-link {
-      @apply font-base xl:text-base sm:text-sm text-grey-white/30 font-semibold no-underline ml-1.5;
+      @apply font-base xl:text-base sm:text-sm text-xs text-grey-white/30 font-semibold no-underline ml-1.5;
     }
   }
 }

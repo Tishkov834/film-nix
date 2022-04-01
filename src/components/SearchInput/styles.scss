@@ -1,8 +1,8 @@
 .search-form {
-  @apply flex xl:w-80 sm:w-72 items-center border border-solid border-grey-blue-dark rounded-xl font-base px-8 py-5;
+  @apply flex xl:w-80 sm:w-72 w-52 items-center border border-solid border-grey-blue-dark rounded-xl font-base px-8 py-5;
 
   &-image {
-    @apply w-7 h-7;
+    @apply sm:w-7 sm:h-7 w-5 h-5;
   }
 
   &-input {
